@@ -19,22 +19,29 @@ class Role extends MY_Controller {
 			//加载页面Css和Js文件
 			$css = array('assets' => array('jquery-ui-1.10.3.custom.min', 'validationEngine.jquery'));
 			$this->template->set('page_css', $css);
+			
+			//加载Role_model
 			$this->load->model('Role_model', 'role');
+			
+			//获取表单数据,进行保存
 			if ($form_data = $this->input->post(NULL, TRUE)) {
+				//获取表单数据
 				$data['name'] = $form_data['name'];
 				if ($form_data['description']) {
 					$data['description'] = $form_data['description'];
 				}
 				$data['time'] = time();
 				if ($form_data['id']) {
+					//如果有id,则表示为修改记录
 					$iid = $this->role->update($form_data['id'], $data, TRUE);
 					//记录日志
-					$this->olog->write("修改{$data['name']}的信息", "update");
+					$this->olog->write("修改角色(管理组){$data['name']}的信息", "update");
 				} else {
+					//如果没有id 则表示新增记录
 					$iid = $this->role->insert($data, TRUE);
 					//记录日志
-					$this->olog->write("添加角色（管理组）", "insert");
-					//默认添加必须可以访问的URL权限
+					$this->olog->write('添加角色(管理组)', 'insert');
+					//添加默认可以访问的URL权限
 					if ($iid > 1) {
 						$this->load->model('Permission_model', 'permission');
 						$this->permission->select('id');
@@ -55,6 +62,7 @@ class Role extends MY_Controller {
 					$this->template->set_message("操作失败！", "alert-danger");
 				}
 			}
+			//将新角色信息赋值到页面 显示出来.
 			if ($id = $this->input->get('id', TRUE)) {
 				$role = $this->role->get($id);
 				$this->template->set('role', $role);

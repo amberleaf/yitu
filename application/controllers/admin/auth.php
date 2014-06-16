@@ -224,7 +224,57 @@ class Auth extends MY_Controller {
 		$this->session->unset_userdata($logout_arr);
 		redirect(base_url() . 'admin/auth/login');
 	}
-
+	
+	/**
+	 * 重置密码
+	 * @return [type] [description]
+	 */
+	public function reset_password() {
+		try {
+			$this->load->model('Admin_model', 'admin');
+			//接受新密码，修改密码
+			if ($data = $this->input->post(NULL, TRUE)) {
+				$password = md5($data['newpwd']);
+				$result = $this->admin->update($data['id'], array('password'=>$password));
+				if ($result > 0) {
+					$this->template->set_message("修改成功，可以重新登录！", "alert-success");
+					redirect(base_url() . 'admin/auth/login');
+				} else {
+					$this->template->set_message("修改失败，可尝试重新修改！", "alert-danger");
+					redirect(base_url() . 'admin/auth/login');
+				}
+			}
+			$user = $this->input->get('user', TRUE);
+			$mail = $this->input->get('mail', TRUE);
+			//检查这个用户是否存在
+			$row = $this->admin->get_by('username', $user);
+			if (empty($row)) {
+				$this->template->set_message("用户不存在！", "alert-danger");
+				redirect(base_url() . 'admin/auth/login');
+			}
+			//检查绑定的邮箱是否和当前邮箱相同
+			if ($mail != $row->email) {
+				$this->template->set_message("邮箱和您账户绑定的邮箱不一致！", "alert-danger");
+				redirect(base_url() . 'admin/auth/login');
+			}
+			$get_hash = $this->input->get('hash', TRUE);
+			$this->config->load('mail');
+			$hash = md5($row->username . $row->email . $this->config->item('mail-hash-key'));
+			if ($hash != $get_hash) {
+				show_error("非法请求！");
+			}
+			if ($hash != $this->session->userdata('mail-hash-key')) {
+				show_error("已经操作或连接超时！");
+			}
+			//请求过一次之后，清空mail-hash-key的Session
+			$this->session->unset_userdata(array('mail-hash-key'=>''));
+			$this->template->set('id', $row->id);
+			$this->template->render(NULL, FALSE, TRUE);
+		} catch (Exception $e) {
+			show_error($e->getMessage());
+		}
+	}
+	
 	/**
 	 * Ajax检查管理员用户名
 	 * @return [type] [description]
@@ -244,7 +294,48 @@ class Auth extends MY_Controller {
 			show_error($e->getMessage());
 		}
 	}
-
+	
+	/**
+	 * 忘记密码，发送电子邮件，取得密码
+	 * @return [type] [description]
+	 */
+	public function send_mail() {
+		try {
+			if ($data = $this->input->post(NULL, TRUE)) {
+				$user = trim($data['user']);
+				$to = trim($data['to']);
+				//TODO 需要检查是否有此用户
+				
+				//加载mail类
+				$this->load->library('email');
+				//取得配置文件参数
+				$this->config->load('mail');
+				//初始化email类
+				$this->email->initialize($this->config->item('mail'));
+				//设置发件人
+				$this->email->from('service@dezhi.com', '德智教育');
+				//设置收件人
+				$this->email->to($to);
+				//设置主题
+				$this->email->subject('医图在线-修改密码');
+				//设置信息内容
+				$hash = md5($user . $to . $this->config->item('mail-hash-key'));
+				$this->session->set_userdata(array('mail-hash-key'=>$hash));
+				$href = base_url() . "admin/auth/reset_password?user=".$user."&mail=".$to."&hash=".$hash;
+				$this->email->message("请点击下面链接重置密码：<br/><a href='".$href."' target='_blank'>" . $href . "</a>");
+				//发送邮件
+				if ($this->email->send()) {
+					$this->template->set_message("邮件已发送至您的邮箱{$to}，请在30分钟内登录您的邮箱完成操作！", "alert-success");
+					redirect(base_url() . 'admin/auth/login');
+				} else {
+					$this->template->set_message("发送失败！", "alert-danger");
+					redirect(base_url() . 'admin/auth/login');
+				}
+			}
+		} catch (Exception $e) {
+			show_error($e->getMessage());
+		}
+	}
 
 }
 

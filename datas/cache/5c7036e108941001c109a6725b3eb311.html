@@ -42,7 +42,13 @@
 	</head>
 
 	<body class="login-layout">
-		<div class="admin-message"></div>
+		<div class="admin-message"><div class="alert alert-success">
+	<button type="button" class="close" data-dismiss="alert">
+		<i class="icon-remove"></i>
+	</button>
+	邮件已发送至您的邮箱amberleaf@163.com，请在30分钟内登录您的邮箱完成操作！
+	<br>
+</div></div>
 		<div class="main-container">
 			<div class="main-content">
 				<div class="row">
@@ -129,20 +135,26 @@
 
 											<div class="space-6"></div>
 											<p>
-												请输入您的邮箱
+												请输入您的账户及和账户绑定的邮箱
 											</p>
 
-											<form>
+											<form action="/admin/auth/send_mail" method="post">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input id="email" type="email" class="form-control" placeholder="Email" />
+															<input id="user" name="user" type="user" class="form-control" placeholder="登录用户名" />
+															<i class="icon-user"></i>
+														</span>
+													</label>
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input id="email" name="to" type="email" class="form-control" placeholder="您设置的邮箱" />
 															<i class="icon-envelope"></i>
 														</span>
 													</label>
 
 													<div class="clearfix">
-														<button type="button" class="width-35 pull-right btn btn-sm btn-danger">
+														<button id="send-mail" type="submit" class="width-35 pull-right btn btn-sm btn-danger">
 															<i class="icon-lightbulb"></i>
 															发送
 														</button>
@@ -213,6 +225,7 @@
 					setTimeout("closeMessage()", 3000);
 				};
 			});
+			
 			function show_box(id) {
 				jQuery('.widget-box.visible').removeClass('visible');
 				jQuery('#'+id).addClass('visible');

@@ -58,11 +58,8 @@
 						<div class="login-container">
 							<div class="center">
 								<h1>
-									<!-- <i class="icon-leaf green"></i> -->
-									<span class="red">医图在线</span>
-									<span class="white">后台管理系统</span>
+									<span class="red">重置密码</span>
 								</h1>
-								<h4 class="blue">&copy; 京ICP备110XXXXXX号</h4>
 							</div>
 
 							<div class="space-6"></div>
@@ -73,23 +70,18 @@
 										<div class="widget-main">
 											<h4 class="header blue lighter bigger">
 												<i class="icon-coffee green"></i>
-												请输入用户名和密码
+												请输入新密码
 											</h4>
 
 											<div class="space-6"></div>
 
-											<form id="login-form" action="/admin/auth/login" method="post">
+											<form id="login-form" action="/admin/auth/reset_password" method="post">
 												<fieldset>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input name="username" type="text" class="validate[required] form-control" placeholder="用户名" />
-															<i class="icon-user"></i>
-														</span>
-													</label>
 
+													<input type="hidden" name="id" value="<?php echo $id?>" />
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input name="password" type="password" class="validate[required] form-control" placeholder="密码" />
+															<input name="newpwd" type="password" class="validate[required] form-control" placeholder="密码" />
 															<i class="icon-lock"></i>
 														</span>
 													</label>
@@ -97,14 +89,10 @@
 													<div class="space"></div>
 
 													<div class="clearfix">
-														<!-- <label class="inline">
-															<input type="checkbox" class="ace" />
-															<span class="lbl"> Remember Me</span>
-														</label> -->
 
-														<button type="submit" class="width-35 pull-right btn btn-sm btn-primary">
+														<button type="submit" class="btn btn-block btn-primary">
 															<i class="icon-key"></i>
-															登录
+															重置
 														</button>
 													</div>
 
@@ -114,66 +102,9 @@
 										</div>
 										<!-- /widget-main -->
 
-										<div class="toolbar clearfix">
-											<div>
-												<a href="#" onclick="show_box('forgot-box'); return false;" class="forgot-password-link">
-													<i class="icon-arrow-left"></i>
-													忘记密码
-												</a>
-											</div>
-										</div>
 									</div><!-- /widget-body -->
 								</div>
 								<!-- /login-box -->
-
-								<!-- 忘记密码 -->
-								<div id="forgot-box" class="forgot-box widget-box no-border">
-									<div class="widget-body">
-										<div class="widget-main">
-											<h4 class="header red lighter bigger">
-												<i class="icon-key"></i>
-												找回密码
-											</h4>
-
-											<div class="space-6"></div>
-											<p>
-												请输入您的账户及和账户绑定的邮箱
-											</p>
-
-											<form action="/admin/auth/send_mail" method="post">
-												<fieldset>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input id="user" name="user" type="user" class="form-control" placeholder="登录用户名" />
-															<i class="icon-user"></i>
-														</span>
-													</label>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input id="email" name="to" type="email" class="form-control" placeholder="您设置的邮箱" />
-															<i class="icon-envelope"></i>
-														</span>
-													</label>
-
-													<div class="clearfix">
-														<button id="send-mail" type="submit" class="width-35 pull-right btn btn-sm btn-danger">
-															<i class="icon-lightbulb"></i>
-															发送
-														</button>
-													</div>
-												</fieldset>
-											</form>
-										</div><!-- /widget-main -->
-
-										<div class="toolbar center">
-											<a href="#" onclick="show_box('login-box'); return false;" class="back-to-login-link">
-												返回登录
-												<i class="icon-arrow-right"></i>
-											</a>
-										</div>
-									</div><!-- /widget-body -->
-								</div>
-								<!-- /忘记密码 -->
 							</div>
 							<!-- /position-relative -->
 						</div>
@@ -221,13 +152,12 @@
 				$("#login-form").validationEngine('attach', {
 					'ajaxFormValidationMethod': 'post',
 					'promptPosition': 'topLeft'
-				});
+				}); 
 				//3秒清除提示信息
 				if ($('.admin-message').html() != '') {
 					setTimeout("closeMessage()", 3000);
 				};
 			});
-			
 			function show_box(id) {
 				jQuery('.widget-box.visible').removeClass('visible');
 				jQuery('#'+id).addClass('visible');
