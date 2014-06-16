@@ -1,0 +1,772 @@
+<!-- main-content -->
+<div class="main-content">
+	<div class="breadcrumbs" id="breadcrumbs">
+		<script type="text/javascript">
+			try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+		</script>
+
+		<ul class="breadcrumb">
+			<li>
+				<i class="icon-home home-icon"></i>
+				<a href="/admin/main/index">首页</a>
+			</li>
+
+			<li>
+				<a href="#">日志管理</a>
+			</li>
+			<li class="active">日志列表</li>
+		</ul><!-- .breadcrumb -->
+
+		<div class="nav-search" id="nav-search">
+			<form class="form-search">
+				<span class="input-icon">
+					<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+					<i class="icon-search nav-search-icon"></i>
+				</span>
+			</form>
+		</div><!-- #nav-search -->
+	</div>
+
+	<div class="page-content">
+		<div class="page-header">
+			<h1>日志列表</h1>
+		</div>
+		<!-- /.page-header -->
+
+		<div class="row">
+			<div class="col-xs-12">
+				<!-- PAGE CONTENT BEGINS -->
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="widget-box">
+							<div class="table-header">
+								共 <b class="text-warning orange">16</b> 条数据
+							</div>
+
+							<div class="widget-body">
+								<div class="widget-main">
+									<form class="search-form form-inline" action="/admin/role/role_lists" method="get">
+										<label for="s_controller">Conroller:</label>
+										<input type="text" id="s_controller" name="s_controller" class="input-sm" placeholder="Controller" value="" />
+										<label for="s_method">Method:</label>
+										<input type="text" id="s_method" name="s_method" class="input-sm" placeholder="Method" value="" />
+										<button type="submit" class="btn btn-success btn-sm">
+											搜索
+											<i class="icon-search icon-on-right bigger-110"></i>
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="table-responsive">
+							<table class="table table-striped table-bordered table-hover">
+								<thead>
+									<tr>
+										<th class="center" width="50">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</th>
+										<th>Controller</th>
+										<th>Method</th>
+										<th>信息</th>
+										<th>URL</th>
+										<th>类型</th>
+										<th>时间</th>
+										<th>管理员</th>
+										<th>IP</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+
+																<tbody>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>role</td>
+										<td>add</td>
+										<td>添加角色（管理组）</td>
+										<td>/admin/role/add</td>
+										<td>insert</td>
+										<td>2014-06-15 13:52:12</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>auth</td>
+										<td>login</td>
+										<td>admin登录成功！</td>
+										<td>/admin/auth/login</td>
+										<td></td>
+										<td>2014-06-15 13:46:23</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>auth</td>
+										<td>login</td>
+										<td>admin登录成功！</td>
+										<td>/admin/auth/login</td>
+										<td></td>
+										<td>2014-06-15 12:15:22</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>auth</td>
+										<td>register</td>
+										<td>新添加了一个管理员，ID是7</td>
+										<td>/admin/auth/register</td>
+										<td>insert</td>
+										<td>2014-06-15 09:55:57</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>auth</td>
+										<td>login</td>
+										<td>admin登录成功！</td>
+										<td>/admin/auth/login</td>
+										<td></td>
+										<td>2014-06-15 09:49:19</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>auth</td>
+										<td>register</td>
+										<td>新添加了一个管理员，ID是6</td>
+										<td>/admin/auth/register</td>
+										<td>insert</td>
+										<td>2014-06-15 07:57:02</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>auth</td>
+										<td>register</td>
+										<td>新添加了一个管理员，ID是5</td>
+										<td>/admin/auth/register</td>
+										<td>insert</td>
+										<td>2014-06-15 07:50:49</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>auth</td>
+										<td>register</td>
+										<td>修改管理员admin的信息</td>
+										<td>/admin/auth/register</td>
+										<td>update</td>
+										<td>2014-06-15 07:39:50</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>auth</td>
+										<td>register</td>
+										<td>修改管理员admin的信息</td>
+										<td>/admin/auth/register</td>
+										<td>update</td>
+										<td>2014-06-15 07:39:06</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>auth</td>
+										<td>register</td>
+										<td>修改管理员admin的信息</td>
+										<td>/admin/auth/register</td>
+										<td>update</td>
+										<td>2014-06-15 07:38:30</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>auth</td>
+										<td>login</td>
+										<td>admin登录成功！</td>
+										<td>/admin/auth/login</td>
+										<td></td>
+										<td>2014-06-15 07:37:49</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>auth</td>
+										<td>register</td>
+										<td>修改管理员admin的信息</td>
+										<td>/admin/auth/register</td>
+										<td>update</td>
+										<td>2014-06-15 07:34:01</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>auth</td>
+										<td>login</td>
+										<td>admin登录成功！</td>
+										<td>/admin/auth/login</td>
+										<td></td>
+										<td>2014-06-15 07:15:24</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>auth</td>
+										<td>login</td>
+										<td>admin登录成功！</td>
+										<td>/admin/auth/login</td>
+										<td></td>
+										<td>2014-06-15 05:01:39</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>auth</td>
+										<td>login</td>
+										<td>admin登录成功！</td>
+										<td>/admin/auth/login</td>
+										<td></td>
+										<td>2014-06-15 02:57:12</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																		<tr>
+										<td class="center">
+											<label>
+												<input type="checkbox" class="ace" />
+												<span class="lbl"></span>
+											</label>
+										</td>
+										<td>auth</td>
+										<td>login</td>
+										<td>admin登录成功！</td>
+										<td>/admin/auth/login</td>
+										<td></td>
+										<td>2014-06-12 15:10:26</td>
+										<td>admin</td>
+										<td>127.0.0.1</td>
+										<td>
+											<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+												<a class="red" href="#">
+													<i class="icon-trash bigger-130"></i>
+												</a>
+											</div>
+
+											<div class="visible-xs visible-sm hidden-md hidden-lg">
+												<div class="inline position-relative">
+													<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-caret-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="删除">
+																<span class="red">
+																	<i class="icon-trash bigger-120"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+																	</tbody>
+															</table>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="dataTables_info">共 16 条数据</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="dataTables_paginate paging_bootstrap"><ul class="pagination"></div>
+								</div>
+							</div>
+						</div><!-- /.table-responsive -->
+					</div><!-- /span -->
+				</div>
+				<!-- PAGE CONTENT ENDS -->
+			</div>
+			<!-- /.col -->
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.page-content -->
+</div>
+<!-- /.main-content -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('table th input:checkbox').on('click' , function(){
+			var that = this;
+			$(this).closest('table').find('tr > td:first-child input:checkbox').each(function(){
+				this.checked = that.checked;
+				$(this).closest('tr').toggleClass('selected');
+			});
+		});
+	});
+</script>

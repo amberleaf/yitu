@@ -1,0 +1,240 @@
+<div class="main-content">
+	<div class="breadcrumbs" id="breadcrumbs">
+		<script type="text/javascript">
+			try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+		</script>
+
+		<ul class="breadcrumb">
+			<li>
+				<i class="icon-home home-icon"></i>
+				<a href="/admin/main/index">首页</a>
+			</li>
+
+			<li>
+				<a href="#">权限管理</a>
+			</li>
+			<li class="active">权限URL（浏览/分配）</li>
+		</ul><!-- .breadcrumb -->
+
+		<div class="nav-search" id="nav-search">
+			<form class="form-search">
+				<span class="input-icon">
+					<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+					<i class="icon-search nav-search-icon"></i>
+				</span>
+			</form>
+		</div><!-- #nav-search -->
+	</div>
+
+	<div class="page-content">
+		<div class="page-header">
+			<h1>
+								<a href="/admin/role/operate_permission"><i class="icon-edit"></i></a> 权限URL（浏览/分配）
+							</h1>
+		</div><!-- /.page-header -->
+
+		<div class="row">
+			<div class="col-xs-12">
+				<!-- PAGE CONTENT BEGINS -->
+				<div class="row">
+																<div class="col-xs-12 col-sm-3">
+						<div class="control-group">
+							<label class="control-label bolder blue">main <a href="/admin/role/operate_permission?group=main"><i class="icon-edit"></i></a></label>
+							<div class="checkbox">
+								<label>
+									<input name="main-all" type="checkbox" class="ace check-all" value="main" />
+									<span class="lbl"> 全选/反选</span>
+								</label>
+							</div>
+																															<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="main-url[]" value="1" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=1&group=main">*</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="main-url[]" value="2" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=2&group=main">/admin/main/index</a></span>
+								</label>
+							</div>
+																														</div>
+					</div>
+											<div class="col-xs-12 col-sm-3">
+						<div class="control-group">
+							<label class="control-label bolder blue">role <a href="/admin/role/operate_permission?group=role"><i class="icon-edit"></i></a></label>
+							<div class="checkbox">
+								<label>
+									<input name="role-all" type="checkbox" class="ace check-all" value="role" />
+									<span class="lbl"> 全选/反选</span>
+								</label>
+							</div>
+																															<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="role-url[]" value="3" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=3&group=role">*</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="role-url[]" value="4" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=4&group=role">/admin/role/add</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="role-url[]" value="5" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=5&group=role">/admin/role/permission</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="role-url[]" value="6" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=6&group=role">/admin/role/operate_permission</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="role-url[]" value="7" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=7&group=role">/admin/role/check_role_name</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="role-url[]" value="8" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=8&group=role">/admin/role/check_key</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="role-url[]" value="9" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=9&group=role">/admin/role/check_url</a></span>
+								</label>
+							</div>
+																														</div>
+					</div>
+											<div class="col-xs-12 col-sm-3">
+						<div class="control-group">
+							<label class="control-label bolder blue">city <a href="/admin/role/operate_permission?group=city"><i class="icon-edit"></i></a></label>
+							<div class="checkbox">
+								<label>
+									<input name="city-all" type="checkbox" class="ace check-all" value="city" />
+									<span class="lbl"> 全选/反选</span>
+								</label>
+							</div>
+																															<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="city-url[]" value="21" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=21&group=city">*</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="city-url[]" value="22" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=22&group=city">/admin/city/get_cities</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="city-url[]" value="23" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=23&group=city">/admin/city/get_depts</a></span>
+								</label>
+							</div>
+																														</div>
+					</div>
+											<div class="col-xs-12 col-sm-3">
+						<div class="control-group">
+							<label class="control-label bolder blue">auth <a href="/admin/role/operate_permission?group=auth"><i class="icon-edit"></i></a></label>
+							<div class="checkbox">
+								<label>
+									<input name="auth-all" type="checkbox" class="ace check-all" value="auth" />
+									<span class="lbl"> 全选/反选</span>
+								</label>
+							</div>
+																															<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="auth-url[]" value="10" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=10&group=auth">*</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="auth-url[]" value="11" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=11&group=auth">/admin/auth/login</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="auth-url[]" value="12" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=12&group=auth">/admin/auth/register</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="auth-url[]" value="13" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=13&group=auth">/admin/auth/logout</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="auth-url[]" value="14" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=14&group=auth">/admin/auth/lists</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="auth-url[]" value="15" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=15&group=auth">/admin/auth/admin_detail</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="auth-url[]" value="16" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=16&group=auth">/admin/auth/create_hospital</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="auth-url[]" value="17" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=17&group=auth">/admin/auth/hospital_lists</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="auth-url[]" value="18" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=18&group=auth">/admin/auth/create_dept</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="auth-url[]" value="19" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=19&group=auth">/admin/auth/dept_lists</a></span>
+								</label>
+							</div>
+																																	<div class="checkbox">
+								<label>
+									<input class="ace" type="checkbox" name="auth-url[]" value="20" />
+									<span class="lbl"> <a href="/admin/role/operate_permission?id=20&group=auth">/admin/auth/check_admin_username</a></span>
+								</label>
+							</div>
+																														</div>
+					</div>
+															</div>
+				<!-- /row -->
+			</div>
+			<!-- /.col -->
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.page-content -->
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	//全选所有url
+	$('.check-all').on('click' , function(){
+		var g = $(this).attr('value'),
+			s = $(this).prop('checked');
+		$("input:checkbox[name='"+g+"-url[]']").prop('checked',s);
+	});
+	});
+</script>
