@@ -1,11 +1,6 @@
 Copyright (c) 2014 - ~, EllisLab, Inc.
 All rights reserved.
 
-<<<<<<< HEAD
-=======
-加一行试试看
-
->>>>>>> 7061638c2131b54eec237cb39e8ecd904ee695c0
 This license is a legal agreement between you and EllisLab Inc. for the use
 of CodeIgniter Software (the "Software").  By obtaining the Software you
 agree to comply with the terms and conditions of this license.
